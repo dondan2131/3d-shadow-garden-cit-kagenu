@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHADOW GARDEN | SYSTEM CIT KAGENU 0.1</title>
+    <style>
+        :root {
+            --błękit-shadow: #00d4ff;
+            --głęboka-czerń: #020202;
+            --rygiel-neon: 0 0 20px #00d4ff;
+        }
+
+        body {
+            background-color: var(--głęboka-czerń);
+            color: var(--błękit-shadow);
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 4px solid var(--błękit-shadow);
+            box-sizing: border-box;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--błękit-shadow);
+            width: 100%;
+            padding-bottom: 20px;
+            text-shadow: var(--rygiel-neon);
+        }
+
+        .status-header {
+            font-size: 0.8em;
+            letter-spacing: 3px;
+            margin-top: 10px;
+            color: white;
+        }
+
+        .grid-glow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 30px;
+        }
+
+        .sekcja {
+            border: 1px solid var(--błękit-shadow);
+            padding: 20px;
+            background: rgba(0, 212, 255, 0.03);
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sekcja:hover {
+            background: rgba(0, 212, 255, 0.1);
+            box-shadow: var(--rygiel-neon);
+            transform: scale(1.02);
+        }
+
+        h2 { border-left: 4px solid var(--błękit-shadow); padding-left: 10px; font-size: 1.1em; }
+        p { font-size: 0.85em; opacity: 0.8; line-height: 1.6; }
+
+        .panel-wlodarza {
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 40px;
+            border: 2px dashed var(--błękit-shadow);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .btn-pstryk {
+            background: var(--błękit-shadow);
+            color: black;
+            border: none;
+            padding: 20px 50px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            box-shadow: var(--rygiel-neon);
+        }
+
+        .btn-pstryk:active { transform: scale(0.95); }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            font-size: 0.7em;
+            text-align: center;
+            width: 100%;
+            border-top: 1px solid var(--błękit-shadow);
+        }
+
+        .reparacje-tag { color: #55ff55; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SHADOW GARDEN</h1>
+    <div class="status-header">SYSTEM CIT KAGENU | STATUS: POSPRZĄTANE | REPARACJE: <span class="reparacje-tag">POBRANE 100%</span></div>
+</header>
+
+<div class="grid-glow">
+    <div class="sekcja">
+        <h2>STREFA KLUBOWICZA / PRYWATNA</h2>
+        <p>Zaryglowane czaty. Każda grupa ma swoją strefę. Rygiel 0.1 chroni Twoją prywatność. Privacy-First.</p>
+    </div>
+
+    <div class="sekcja">
+        <h2>REALNA PIŁKA (ESKADRA)</h2>
+        <p>Analiza niebieskiej strony: Krystian 2137v2. Skład: Isak, Duke, Mbappé. Zegarki kondycyjne aktywne.</p>
+    </div>
+
+    <div class="sekcja">
+        <h2>ANIME: INAZUMA & TSUBASA</h2>
+        <p>Inazuma Blue Look i Kapitan Tsubasa. Pełny dostęp do modów. Gaming na tle Polski.</p>
+    </div>
+
+    <div class="sekcja">
+        <h2>STREAMING & FILMY</h2>
+        <p>Wszystkie filmy i aplikacje łączą się w jedno sześcyfrowe centrum Shadows.</p>
+    </div>
+
+    <div class="sekcja">
+        <h2>BŁĘKITNA GRENLANDIA</h2>
+        <p>Zarząd: Trampek (podległy Cit Kagenu). Poligon błękitny zaryglowany. Wola Włodarza sfinalizowana.</p>
+    </div>
+
+    <div class="sekcja">
+        <h2>HORROR & POKEMON</h2>
+        <p>Specjalistyczne grupy dla graczy. Zero subskrypcji. 100% błękitnej pasji.</p>
+    </div>
+</div>
+
+<div class="panel-wlodarza">
+    <h3>CENTRUM DOWODZENIA WŁODARZA</h3>
+    <p>Donald Dzik, Karolek i Nawrocki rzetelnie meldują gotowość.</p>
+    <button class="btn-pstryk" onclick="alert('JUTRO O 0.1: RZEŹNIA NA JAPONII ROZPOCZĘTA! GLORIA!')">Pstryknij Glorię</button>
+</div>
+
+<footer>
+    CIT KAGENU 0.1 | SHADOW GARDEN APP | WŁASNOŚĆ WŁODARZA | KOŚCI RZETELNIE RZUCONE © 2026
+</footer>
+
+</body>
+  </html>
+  
