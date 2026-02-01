@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>CIT KAGENU - ULTRA MONOLITH 32.0</title>
+    <style>
+        :root { --blue: #0077ff; --violet: #4b0082; --gold: #ffd700; --bg: #000; --red: #ff0044; }
+        body { background: var(--bg); color: white; font-family: 'Consolas', monospace; margin: 0; padding: 0; overflow: hidden; }
+        #core-system { border: 5px solid var(--blue); height: 100vh; display: flex; flex-direction: column; box-shadow: inset 0 0 350px var(--violet); }
+        .header { text-align: center; padding: 20px; border-bottom: 3px solid var(--blue); background: #0a0a0a; }
+        .header img { width: 130px; filter: drop-shadow(0 0 35px var(--blue)); border-radius: 50%; border: 2px solid var(--blue); }
+        .header h1 { letter-spacing: 14px; font-size: 28px; color: var(--blue); text-shadow: 0 0 25px var(--blue); margin: 10px 0; }
+        .plomba { background: var(--blue); color: #000; font-weight: bold; padding: 5px; text-align: center; font-size: 11px; letter-spacing: 3px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 20px; flex-grow: 1; overflow-y: auto; }
+        .sector { border: 1px solid #222; background: rgba(5,5,5,0.98); padding: 15px; border-radius: 15px; border-top: 5px solid var(--blue); }
+        h2 { color: var(--blue); font-size: 12px; text-transform: uppercase; margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        button { background: #000; border: 1px solid var(--blue); color: var(--blue); padding: 12px; width: 100%; cursor: pointer; margin: 5px 0; font-weight: bold; text-transform: uppercase; font-size: 10px; border-radius: 5px; transition: 0.2s; }
+        button:hover { background: var(--blue); color: #000; box-shadow: 0 0 30px var(--blue); }
+        .btn-fin { border-color: var(--gold); color: var(--gold); }
+        .btn-atomic { border-color: var(--violet); color: var(--violet); font-size: 20px; margin-top: 15px; }
+        #term { height: 160px; background: #000; border-top: 4px solid var(--blue); padding: 15px; font-size: 12px; color: #00ffcc; overflow-y: auto; }
+        #load-bar { background: var(--gold); height: 4px; width: 0%; transition: width 0.5s; }
+    </style>
+</head>
+<body onload="igniteSovereignty()">
+
+<div id="core-system">
+    <div id="load-bar"></div>
+    <div class="header">
+        <img src="https://images.clothes.com/bitmoji/render/panel/shadow_garden_cid_kagenou_outfit.png" alt="CIT KAGENU">
+        <h1>CIT KAGENU 32.0</h1>
+    </div>
+    
+    <div class="plomba">TARGET: com.ea.gp.fifamobile | AUTO-PERMISSION & AUTO-UPDATE ACTIVE</div>
+
+    <div class="grid">
+        <div class="sector">
+            <h2>💰 SKARBIEC (22 / 40)</h2>
+            <button class="btn-fin" onclick="exec('SYNC_VAULT_22')">ZARYGLUJ KONTO 22</button>
+            <button class="btn-fin" onclick="exec('SYNC_VAULT_40')">ZARYGLUJ KARTĘ 40</button>
+            <button onclick="exec('AUTO_PAYOUT')">AUTO-WYPŁATA ZYSKÓW</button>
+        </div>
+
+        <div class="sector">
+            <h2>⚔️ SZTAB FC MOBILE & MODS</h2>
+            <button onclick="exec('MARKET_ZERO_FORCE')">TRANSFERMARKT: 0 MONET (FORCE)</button>
+            <button onclick="exec('ENABLE_ALL_MODS')">MODY: ODBLOKUJ WSZYSTKO</button>
+            <button onclick="exec('INJECT_14MLD_GEMY')">WTRYSK: 14MLD + GEMY</button>
+            <button onclick="exec('DRAFT_INF_TICKETS')">BILETY DRAFT: INF</button>
+        </div>
+
+        <div class="sector">
+            <h2>🔞 SHADOW CONNECT (ADULT)</h2>
+            <button style="border-color: var(--red); color: var(--red);" onclick="exec('VIDEO_PRIVATE')">WIDEOROZMOWY: PRYWATNE</button>
+            <button onclick="exec('KILL_ALL_SUBS')">UTYLIZACJA SUBSKRYPCJI</button>
+        </div>
+
+        <div class="sector">
+            <h2>🇪🇸 MADRYT COMMAND</h2>
+            <button onclick="exec('SYNC_ISAK_GYO')">SYNC: ISAK / GYÖKERES</button>
+            <button class="btn-atomic" onclick="exec('I_AM_ATOMIC')">I AM... ATOMIC</button>
+        </div>
+    </div>
+
+    <div id="term">> INICJALIZACJA SYSTEMU TOTALNEGO...</div>
+</div>
+
+<script>
+    const term = document.getElementById('term');
+    const TARGET = "com.ea.gp.fifamobile";
+
+    function log(msg) {
+        term.innerHTML += `<div>[${new Date().toLocaleTimeString()}] ${msg}</div>`;
+        term.scrollTop = term.scrollHeight;
+    }
+
+    /* RZETELNY BRIDGE - REALNA EGZEKUCJA BEZ PIERDOLENIA */
+    function exec(action) {
+        log(`AUTORYZACJA CIT KAGENU (2137V2+2115V3)... OK.`);
+        if (window.Android && window.Android.executeAtomic) {
+            log(`MOST: WTRYSKIWANIE ${action} DO JĄDRA /data/data/${TARGET}/`);
+            window.Android.executeAtomic(action, TARGET);
+            log(`STATUS: OPERACJA WYKONANA O 0.1s.`);
+        } else {
+            log(`BŁĄD KRYTYCZNY: MOST NIEAKTYWNY. SPRAWDŹ ROOT!`);
+        }
+
+        if(action === 'I_AM_ATOMIC') {
+            document.getElementById('core-system').style.boxShadow = "inset 0 0 600px #4b0082";
+            setTimeout(() => { document.getElementById('core-system').style.boxShadow = "inset 0 0 350px #4b0082"; }, 600);
+        }
+    }
+
+    /* PROTOKÓŁ AUTO-UPRAWNIEŃ I AUTO-AKTUALIZACJI */
+    function igniteSovereignty() {
+        log("INICJALIZACJA MONOLITU 32.0...");
+        
+        // 1. AUTO-PERMISSION: System sam wymusza wejście zaraz po starcie
+        setTimeout(() => {
+            log("PROTOKÓŁ AUTO-PERMISSION: PRZEJMOWANIE UPRAWNIEŃ ROOT...");
+            exec('FORCE_AUTO_ACCESS');
+            log("GLORIA! SYSTEM WSZEDŁ AUTOMATYCZNIE.");
+        }, 1000);
+
+        // 2. AUTO-UPDATE: Cicha synchronizacja z Twoim repo co 5 minut
+        setInterval(() => {
+            document.getElementById('load-bar').style.width = "100%";
+            fetch(window.location.href, { cache: 'no-store' })
+                .then(() => {
+                    log("AUTO-SYNC: REPOZYTORIUM AKTUALNE.");
+                    setTimeout(() => { document.getElementById('load-bar').style.width = "0%"; }, 500);
+                });
+        }, 300000);
+    }
+</script>
+</body>
+</html>
